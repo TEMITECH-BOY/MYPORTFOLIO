@@ -15,7 +15,7 @@ export default function Contact() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Github size={24} />
+          <Github size={24} />pm 
         </a>
         <a
           href="https://www.linkedin.com/in/temitayo-osunla-b483891b4/"

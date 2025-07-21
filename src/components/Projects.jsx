@@ -11,12 +11,13 @@ const projects = [
     github: "https://github.com/TEMITECH-BOY/Organix-Farm",
   },
   {
-    name: "Real Estate Listings App",
-    description: "View & filter properties, with authentication.",
-    tech: "React, Bootstrap, Django REST",
-    image: "/lightsphere.png",
-    demo: "https://your-real-estate-demo.com",
-    github: "https://github.com/yourusername/real-estate-app",
+    name: "Browser Extension Manager",
+    description:
+      "Displays extensions with logo, name, description, toggle to activate/deactivate, and remove option. Includes filter tabs: All, Active, Inactive.",
+    tech: "JavaScript, CSS, HTML5",
+    image: "/extension-manager.webp",
+    demo: "https://browser-extension-manager-sandy.vercel.app/",
+    github: "https://github.com/TEMITECH-BOY/browserExtensionManager",
   },
   {
     name: "Interior Design",
@@ -40,11 +41,14 @@ export default function Projects() {
             key={index}
             className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
           >
-            <img
-              src={project.image}
-              alt={project.name}
-              className="w-full h-48 object-cover"
-            />
+            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-full h-48 object-cover"
+              />
+            </a>
+
             <div className="p-4 flex flex-col justify-between h-full">
               <div>
                 <h4 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
