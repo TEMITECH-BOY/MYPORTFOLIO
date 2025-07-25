@@ -31,7 +31,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-6xl mx-auto py-16 px-4">
+    <section id="projects" className="max-w-6xl mx-auto py-16 px-4 ">
       <h3 className="text-3xl font-bold mb-8 text-center text-teal-600 dark:text-teal-400">
         Projects
       </h3>
@@ -41,13 +41,13 @@ export default function Projects() {
             key={index}
             className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
           >
-            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+            
               <img
                 src={project.image}
                 alt={project.name}
                 className="w-full h-48 object-cover"
               />
-            </a>
+            
 
             <div className="p-4 flex flex-col justify-between h-full">
               <div>
@@ -60,8 +60,7 @@ export default function Projects() {
                 <span className="inline-block bg-teal-100 text-teal-600 dark:bg-teal-900 dark:text-teal-300 px-2 py-1 rounded text-xs font-medium">
                   {project.tech}
                 </span>
-              </div>
-              <div className="flex items-center mt-4 space-x-4">
+                <div className="flex items-center  mt-6 space-x-4">
                 <a
                   href={project.github}
                   target="_blank"
@@ -76,9 +75,11 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition"
                 >
-                  <FaExternalLinkAlt size={18} />
+                  <FaExternalLinkAlt size={18} className="green-400" />
                 </a>
               </div>
+              </div>
+              
             </div>
           </div>
         ))}

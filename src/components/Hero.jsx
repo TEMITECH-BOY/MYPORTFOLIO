@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-b from-teal-500 to-teal-400 text-white">
+    <section className="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-b from-teal-500 to-teal-400 text-white ">
       <h2 className="text-4xl md:text-5xl font-bold mb-4">
         Frontend Developer
       </h2>
