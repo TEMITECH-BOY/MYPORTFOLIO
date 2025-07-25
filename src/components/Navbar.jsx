@@ -1,51 +1,62 @@
 import React, { useEffect, useState } from "react";
-import { Sun, Moon } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
+ 
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // On mount, check localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem("darkMode") === "true";
-    setDarkMode(saved);
-    if (saved) {
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
+  
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    if (!darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    localStorage.setItem("darkMode", !darkMode);
-  };
+ 
+
+  // Toggle mobile menu
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <header className="flex justify-between items-center p-4 shadow-md bg-teal-500 text-white dark:bg-gray-900 dark:text-gray-100">
-      <h1 className="text-xl font-bold">Temitayo Osunla</h1>
-      <nav className="flex items-center space-x-4">
-        <a href="#about" className="hover:underline">
-          About
-        </a>
-        <a href="#projects" className="hover:underline">
-          Projects
-        </a>
-        <a href="#contact" className="hover:underline">
-          Contact
-        </a>
-        <a
-  href="/cv.docx"
-  download
-  className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded transition"
->
-  Download CV
-</a>
+    <header className="bg-teal-500 dark:bg-gray-900 text-white dark:text-gray-100 shadow-md">
+      
+      <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <h1 className="text-xl font-bold">Temitayo Osunla</h1>
 
-       
-      </nav>
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center space-x-4">
+          <a href="#about" className="hover:underline">About</a>
+          <a href="#projects" className="hover:underline">Projects</a>
+          <a href="#contact" className="hover:underline">Contact</a>
+          <a
+            href="/cv.docx"
+            download
+            className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-4 rounded transition"
+          >
+            Download CV
+          </a>
+         
+        </nav>
+
+        {/* Mobile: hamburger & toggle */}
+        <div className="md:hidden flex items-center space-x-2">
+          
+          <button onClick={toggleMenu} className="p-2 rounded hover:bg-teal-600">
+            <Menu size={24} />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile dropdown */}
+      {menuOpen && (
+        <nav className="md:hidden bg-teal-600 dark:bg-gray-800 flex flex-col space-y-2 px-4 pb-4">
+          <a href="#about" className="hover:underline">About</a>
+          <a href="#projects" className="hover:underline">Projects</a>
+          <a href="#contact" className="hover:underline">Contact</a>
+          <a
+            href="/cv.docx"
+            download
+            className="bg-teal-700 hover:bg-teal-800 text-white font-semibold py-2 px-4 rounded transition"
+          >
+            Download CV
+          </a>
+        </nav>
+      )}
     </header>
   );
 }
