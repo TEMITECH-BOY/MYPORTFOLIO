@@ -27,6 +27,14 @@ const projects = [
     demo: "https://project-lightsphere.vercel.app/ ",
     github: "https://github.com/TEMITECH-BOY/projectLightsphere",
   },
+  {
+    name: "CO-FI - A Coffee Shop",
+    description: "A coffee shop website with a modern design.",
+    tech: "React, Tailwind CSS",
+    image: "/cofi.png",
+    demo: "https://co-fi-omega.vercel.app/",
+    github: "https://github.com/TEMITECH-BOY/CO-FI-.git",
+  },
 ];
 
 export default function Projects() {
