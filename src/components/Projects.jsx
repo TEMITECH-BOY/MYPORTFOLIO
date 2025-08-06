@@ -11,6 +11,15 @@ const projects = [
     github: "https://github.com/TEMITECH-BOY/Organix-Farm",
   },
   {
+    name: "Clone Responsive Landing Page",
+    description:
+      "This project is a responsive real estate website showcasing property listings, Instagram updates, and a newsletter subscription, designed with React and Tailwind CSS.",
+    tech: "React, Tailwind CSS",
+    image: "/wonder.png",
+    demo: "https://wonder-real-estate.vercel.app/",
+    github: "https://github.com/TEMITECH-BOY/wonder-real-estate",
+  },
+  {
     name: "Browser Extension Manager",
     description:
       "Displays extensions with logo, name, description, toggle to activate/deactivate, and remove option. Includes filter tabs: All, Active, Inactive.",
