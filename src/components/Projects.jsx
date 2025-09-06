@@ -3,14 +3,14 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
-    name: "Clone Responsive Landing Page",
-    description: "A clean responsive landing page clone.",
-    tech: "React, Tailwind CSS",
-    image: "/organix.png",
-    demo: "https://organix-farm.vercel.app/",
-    github: "https://github.com/TEMITECH-BOY/Organix-Farm",
-  },
-  {
+  name: "Chat Assistant App",
+  description: "A real-time chat interface built with Next.js. Features include message persistence, loading states, and a clean modern UI.",
+  tech: "Next.js, Tailwind CSS, Lucide Icons",
+  image: "/chat-app.png",
+  demo: "https://my-chat-app-one-silk.vercel.app/chat",
+  github: "https://github.com/TEMITECH-BOY/my-chat-app"
+},
+{
     name: "Clone Responsive Landing Page",
     description:
       "This project is a responsive real estate website showcasing property listings, Instagram updates, and a newsletter subscription, designed with React and Tailwind CSS.",
@@ -19,6 +19,16 @@ const projects = [
     demo: "https://wonder-real-estate.vercel.app/",
     github: "https://github.com/TEMITECH-BOY/wonder-real-estate",
   },
+
+  {
+    name: "Clone Responsive Landing Page",
+    description: "A clean responsive landing page clone.",
+    tech: "React, Tailwind CSS",
+    image: "/organix.png",
+    demo: "https://organix-farm.vercel.app/",
+    github: "https://github.com/TEMITECH-BOY/Organix-Farm",
+  },
+  
   {
     name: "Browser Extension Manager",
     description:
